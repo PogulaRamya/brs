@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Book Recommendation System</title>
+    <link rel="stylesheet" type='text/css' href="{{ url_for('static',filename='style.css') }}">
+    <script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Yatra+One&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <!--Website Title -->
+    <body background="{{ url_for('static',filename='r1.jpg') }}">
+    <div class="container1">
+
+      <h2 class="container-heading1"><span class="heading_font1"><b><u>Book Recommendation</span></u></b></h2>
+      <div class="description1">
+        <p></p>
+      </div>
+    </div>
+
+    <!--Results -->
+    <div class="results">
+      <h1><b>Recommended Books for {{ book }}</b></h1><br><br>
+      <h2>{% for element in recommendation %}
+        <p> *  {{ element }} </p>
+      {% endfor %}</h2>
+    </div>
+  </div>
+
+
+  </body>
+</html>

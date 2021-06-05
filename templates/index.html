@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Book Recommendation System</title>
+    <link rel="stylesheet" type='text/css' href="{{ url_for('static',filename='style.css') }}">
+    <script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Yatra+One&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <body background="{{ url_for('static',filename='i1.jpg') }}">
+   <div class="mtop">
+    <img src="{{ url_for('static',filename='i2.png') }}" width="2000px" height="150px">
+  </div>
+    <!--Website Title -->
+
+    <div class="container">
+      <h2 class='container-heading'><span class="heading_font"><b><u>Book </span>Recommendation System</u></b></h2>
+      <div class="description">
+        <p2></p2>
+      </div>
+    </div>
+
+    <!--TextArea -->
+    <div>
+      <form action="{{ url_for('predict') }}" class="ml-container" method="POST">
+        <textarea name="message" font-size="20" class="message-box" rows="8" cols="80"placeholder="Enter a book that you already read..."></textarea>
+        <br><br>
+        <input type="submit"  class="my-cta-button" value="Recommend">
+      </form>
+    </div>
+  </span>
+</h2>
+
+  </body>
+</html>

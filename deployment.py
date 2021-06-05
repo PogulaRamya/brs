@@ -12,7 +12,7 @@ df.head()
 def recommendation_knn(title):
     recommended_books=[]
     #Getting the bookId for the given title
-    id = df.loc[ratings_with_totalratings_pivot['bookTitle'] == title].index.values.astype(int)[0]
+    id = df.loc[df['bookTitle'] == title].index.values.astype(int)[0]
      #Getting the distances and indices of 5 nearest neighbours
     distances, indices = model.kneighbors(df.drop('bookTitle',axis=1).iloc[id,:].values.reshape(1, -1), n_neighbors = 6)
     for i in range(1, len(distances.flatten())):

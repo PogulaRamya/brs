@@ -4,7 +4,7 @@ import pickle
 
 filename='knn-collab-recommendation.pkl'
 knn_model=pickle.load(open(filename,'rb'))
-
+pickle.dump(knn_model,open(filename,'wb'))
 df=pd.read_csv('CleanBooks.csv')
 df.head()
 

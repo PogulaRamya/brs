@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>ERROR</title>
+	<link rel="stylesheet"type="text/css"href="{{ url_for('static',filename='style.css') }}">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+	<style>
+	body{
+		background: #fff;
+	}
+</style>
+ <div class="pic1">
+	<img src="{{ url_for('static',filename='e1.jpeg') }}">
+</div>
+<div class="pic2">
+	<img src="{{ url_for('static',filename='e2.jpg') }}">
+</div>
+	<div class="ebox">
+	<div class="sry">
+		<h1>Sorry..,<br></h1>
+		<p><h3><i> Your search {{ book }} did not match our database .<br><br> Please check and try again.. :)</i></h3></p>
+		<div class="submit">
+		<a href="#" class="bttn"><b>Try again</b></a>
+	</div>
+		</div>
+	</div>
+</body>
+</html>
